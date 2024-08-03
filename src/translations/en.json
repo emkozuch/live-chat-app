@@ -1,3 +1,6 @@
 {
-  "modals.auth.common.title": "Welcome to Live Chat"
+  "auth.common.title": "Welcome to Live Chat",
+  "auth.inputs.login.placeholder": "Login",
+  "auth.inputs.password.placeholder": "Password",
+  "forms.validation.requiredField": "This field is required"
 }

@@ -21,7 +21,14 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./src",
+    "paths": {
+      "components": ["./components"],
+      "hooks": ["./hooks"],
+      "theme": ["./theme"]
+    }
   },
-  "include": ["src"]
+  "include": ["src", "main.tsx"],
+  "exclude": ["node_modules"]
 }
