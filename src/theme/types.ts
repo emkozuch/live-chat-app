@@ -46,6 +46,7 @@ interface Colors {
   secondary: string;
   secondaryDark: string;
   background: string;
+  modalBackground: string;
   surface: string;
   error: string;
   warning: string;
@@ -56,10 +57,24 @@ interface Colors {
   textDisabled: string;
   border: string;
 }
+export interface Borders {
+  sizes: {
+    thin: string;
+    medium: string;
+    thick: string;
+  };
+  radius: {
+    small: string;
+    medium: string;
+    large: string;
+    round: string;
+  };
+}
 
 export interface Theme {
   colors: Colors;
   typography: Typography;
   breakpoints: Breakpoints;
   spacing: Spacing;
+  borders: Borders;
 }

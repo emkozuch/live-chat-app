@@ -1,17 +1,20 @@
-import {
-  createGlobalStyle,
-  ThemeContext,
-  ThemeProvider,
-} from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Theme } from "./types";
 import { darkTheme, lightTheme } from "./tokens";
-import { ReactElement, useContext, useState } from "react";
+import { ReactElement, useState } from "react";
 
 const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
 body {
 font-family: ${(props) => props.theme.typography.fontFamily};
 background-color: ${(props) => props.theme.colors.background};
 color: ${(props) => props.theme.colors.textPrimary};
+margin: ${(props) => props.theme.spacing.none};
+width: 100%;
+height: 100%;
+}
+html{
+width: 100%;
+height: 100%;
 }
 `;
 
@@ -25,18 +28,12 @@ type Props = {
 };
 
 export const AppThemeProvider = ({ children }: Props) => {
-  const [theme, setTheme] = useState(themes.dark);
+  const [theme, setTheme] = useState<Theme>(themes.dark);
 
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === themes.dark ? themes.light : themes.dark));
-  };
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle theme={theme} />
-        {children}
-      </ThemeProvider>
-    </ThemeContext.Provider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle theme={theme} />
+      {children}
+    </ThemeProvider>
   );
 };
-export const useTheme = () => useContext(ThemeContext);

@@ -40,6 +40,19 @@ export const sharedTokens = {
     xl: "32px",
     xxl: "48px",
   },
+  borders: {
+    sizes: {
+      thin: "1px",
+      medium: "2px",
+      thick: "4px",
+    },
+    radius: {
+      small: "4px",
+      medium: "8px",
+      large: "16px",
+      round: "50%",
+    },
+  },
 };
 
 export const lightTheme: Theme = {
@@ -49,6 +62,7 @@ export const lightTheme: Theme = {
     secondary: "#FF5722",
     secondaryDark: "#E64A19",
     background: "#FFFFFF",
+    modalBackground: "rgba(0, 0, 0, 0.5)",
     surface: "#F5F5F5",
     error: "#D32F2F",
     warning: "#FFA000",
@@ -69,6 +83,7 @@ export const darkTheme: Theme = {
     secondary: "#FF7043",
     secondaryDark: "#FF3D00",
     background: "#121212",
+    modalBackground: "rgba(0, 0, 0, 0.5)",
     surface: "#212121",
     error: "#CF6679",
     warning: "#FFB300",
