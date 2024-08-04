@@ -2,5 +2,7 @@
   "auth.common.title": "Welcome to Live Chat",
   "auth.inputs.login.placeholder": "Login",
   "auth.inputs.password.placeholder": "Password",
-  "forms.validation.requiredField": "This field is required"
+  "conversations.inputs.search.placeholder": "Type username...",
+  "forms.validation.requiredField": "This field is required",
+  "accessibility.alts.avatar": "avatar image"
 }

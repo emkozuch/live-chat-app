@@ -26,7 +26,8 @@
     "paths": {
       "components": ["./components"],
       "hooks": ["./hooks"],
-      "theme": ["./theme"]
+      "theme": ["./theme"],
+      "utils": ["./utils"]
     }
   },
   "include": ["src", "main.tsx"],

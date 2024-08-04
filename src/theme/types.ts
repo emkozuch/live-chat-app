@@ -47,6 +47,8 @@ interface Colors {
   secondaryDark: string;
   background: string;
   modalBackground: string;
+  accent: string;
+  accentLight: string;
   surface: string;
   error: string;
   warning: string;
@@ -54,6 +56,7 @@ interface Colors {
   success: string;
   textPrimary: string;
   textSecondary: string;
+  textDark: string;
   textDisabled: string;
   border: string;
 }
